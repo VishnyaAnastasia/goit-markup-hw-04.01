@@ -5,13 +5,14 @@
     --secondary-font-family: Raleway, sans-serif;
     --primery-text-color-light-theme: #757575;
     --secomdary-text-color-light-theme: #212121;
+    --additional-text-color-light-theme: #AFB1B8;
     --primery-text-color-dark-theme: #FFFFFF;
     --secomdary-text-color-dark-theme: rgba(255, 255, 255, 0.6);
     --accent-color: #2196F3;
     --bacground-color-dark-theme: #2F303A;
     --bacground-color-light-theme: #F5F4FA;
-    --logo-header-dark-color:#000;
-    --accent-color-button-focus:#188CE8;
+    --logo-header-dark-color: #000;
+    --accent-color-button-focus: #188CE8;
 }
 
 
@@ -147,6 +148,8 @@ img {
 .header-contact-list {
     display: flex;
     margin-left: auto;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .header-contact-list .item:not(:first-child) {
@@ -162,7 +165,9 @@ img {
     color: var(--primery-text-color-light-theme);
     padding-top: 32px;
     padding-bottom: 32px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-contact-list-link:hover,
@@ -174,12 +179,23 @@ img {
     color: var(--accent-color);
 }
 
+.header-contact-icon {
+    fill: currentColor;
+    margin-right: 10px;
+    align-items: baseline;
+    justify-content: center;
+    background-position: center;
+}
+
 /*======END NAVIGATION======*/
 
 /*======START HERO======*/
 
 .hero {
-    background-color: var(--bacground-color-dark-theme);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/back-img.jpg);
+    background-color: var(--background-color-hero);
+    background-size: cover;
+    background-position: center;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -223,7 +239,7 @@ img {
 
 .hero-btn:hover,
 .hero-btn:focus {
-    background-color:var(--accent-color-button-focus);
+    background-color: var(--accent-color-button-focus);
 }
 
 
@@ -244,6 +260,16 @@ img {
     margin-right: 30px;
 }
 
+.our-advantades-icon-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background: var(--bacground-color-light-theme);
+    border-radius: 4px;
+}
+
 .our-advantages-subtitle {
     font-weight: 700;
     font-size: 14px;
@@ -251,6 +277,7 @@ img {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secomdary-text-color-light-theme);
+    margin-top: 30px;
 }
 
 .our-advantages-text {
@@ -324,6 +351,8 @@ img {
 .our-team-info {
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
 
 }
 
@@ -345,7 +374,71 @@ img {
     margin-top: 10px;
 }
 
+.social-list {
+    display: flex;
+    margin-top: 16px;
+    justify-content: space-between;
+}
+
+.social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    fill: var(--additional-text-color-light-theme);
+    border-radius: 50%;
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    fill: var(--primery-text-color-dark-theme);
+    background-color: var(--accent-color);
+}
+
+
 /*======END COMMAND BLOCK======*/
+
+/*======START CLIENTS======*/
+
+.clients-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--secomdary-text-color-light-theme);
+}
+
+.clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--additional-text-color-light-theme);
+    box-sizing: border-box;
+    border-radius: 4px;
+    fill: var(--additional-text-color-light-theme);
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+    fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+/*======END CLIENTS======*/
 
 /*======START PORTFOLIO======*/
 
@@ -395,6 +488,15 @@ img {
     margin-left: 30px;
 }
 
+.projects-list-link {
+    display: block;
+}
+
+.projects-list-link:hover,
+.projects-list-link:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .projects-info {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -436,6 +538,10 @@ address {
     padding-top: 60px;
 }
 
+.contact-container {
+    display: flex;
+}
+
 .logo-container {
     padding-top: 0;
     padding-bottom: 0;
@@ -473,4 +579,47 @@ address {
     text-decoration: underline;
 }
 
-/*======END FOOTER======*/
+.contact-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.social-media-container {
+    margin-left: 70px;
+}
+
+.social-media-subtitle {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--primery-text-color-dark-theme);
+}
+
+.social-medial-footer-list {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.social-medial-footer-list-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.social-medial-footer-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    fill: var(--primery-text-color-dark-theme);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social-medial-footer-list-link:hover,
+.social-medial-footer-list-link:focus {
+    background-color: var(--accent-color);
+
+    /*======END FOOTER======*/
